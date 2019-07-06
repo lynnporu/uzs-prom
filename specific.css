@@ -1,0 +1,488 @@
+@keyframes railtipsScrolling {
+
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(-1150px);
+  }
+
+}
+
+@keyframes dimming {
+
+	from {
+		opacity: .2;
+	}
+
+	to {
+		opacity: 1;
+	}
+
+}
+
+@media(min-width: 1000px) {
+
+  .rl-spacing > div > div {
+    display: inline-block;
+    width: calc(50% - 40px);
+  }
+
+}
+
+@media(max-width: 1000px) {
+
+  #gpssharing .info > div, .h-centrize.info > div {
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .rl-spacing > div > div {
+    display: block;
+  }
+
+}
+
+@media(min-width: 870px) {
+
+  #gpssharing .map {
+    display: inline-block;
+  }
+
+  #gpssharing .box:before {
+    top: calc(50% - 10px);
+    left: -10px;
+  }
+
+}
+
+@media(max-width: 870px) {
+
+  #gpssharing .map {
+    display: block;
+  }
+
+  #gpssharing .box:before {
+    top: -10px;
+    left: calc(50% - 10px);
+  }
+
+}
+
+@media(min-width: 780px) {
+  
+  .rl-spacing img {
+    width: 400px;
+    height: 400px;
+  }
+
+}
+
+@media(max-width: 780px) {
+
+  .rl-spacing {
+    flex-direction: column-reverse;
+  }
+
+  .rl-spacing img {
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+@media(min-width: 520px) {
+
+  .scheduleinfo, .weather span:nth-child(2), #gpssharing .info > div span:nth-child(2)  {
+    font-size: 2.5em;
+  }
+  
+  #story .places {
+    max-width: 400px;
+    white-space: nowrap;
+  }
+
+  #story .places li {
+    display: inline-block;
+  }
+  
+  #gpssharing .box {
+    left: 50px;
+  }
+	
+}
+
+@media(max-width: 520px) {
+
+  .scheduleinfo, .weather span:nth-child(2), #gpssharing .info > div span:nth-child(2) {
+    font-size: 1.5em;
+  }
+  
+  #story .places {
+    overflow-x: normal;
+    white-space: normal;
+  }
+  
+  #story .places li {
+    display: block;
+  }
+  
+  #gpssharing .map {
+    transform: scale(.8) translateX(-30px);
+    margin-bottom: -80px;
+  }
+	
+}
+
+@media(min-width: 520px) {
+  
+  #gpssharing .box {
+    left: calc(50% - 173px);
+  }
+}
+
+@media(max-width: 520px) {
+
+  #gpssharing .box {
+    left: 0;
+    width: 100%;
+  }
+}
+
+#mapsection {
+  background: url("img/map.svg");
+  padding: 100px 0;
+  background-position: top left;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#mapsection p {
+  background: rgba(255, 255, 255, .4);
+}
+
+#railtips {
+  background: linear-gradient(
+    to bottom, 
+    transparent 20px,
+    var(--soft-blue-1) 20px, 
+    var(--soft-blue-1) 30px,
+    transparent 30px
+  );
+  padding: 30px 30px 0;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+#railtips .station {
+  display: inline-block;
+  position: relative;
+  margin: 30px 30px 0 10px;
+  border-radius: 3px;
+  white-space: normal;
+  vertical-align: top;
+  font-size: .9em;
+  animation: 180s linear infinite alternate railtipsScrolling;
+}
+
+#railtips .station:before {
+  content: "";
+  background: white;
+  width: 20px;
+  height: 20px;
+  display: block;
+  top: -10px;
+  left: 15px;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+#railtips .station:after {
+  content: "";
+  background: var(--soft-blue-1);
+  width: 10px;
+  height: 20px;
+  display: block;
+  top: -55px;
+  left: 17.5px;
+  position: absolute;
+  box-shadow: var(--box-shadowing);
+}
+
+#railtips h2, #railtips p {
+  margin: 0
+}
+
+.weather i {
+  color: var(--grey);
+}
+
+.scheduleinfo i {
+  color: var(--grey);
+  font-size: .5em;
+  position: relative;
+  top: -.25em
+}
+
+.info > div {
+  display: inline-block;
+  line-height: 1.5;
+  margin: 0 20px 0 0;
+  vertical-align: top;
+}
+
+.info > div span:nth-child(1) {
+  display: block;
+  color: var(--grey)
+}
+
+#railtips .tip {
+  max-width: 300px;
+  background: var(--soft-blue-1);
+  padding: 10px;
+  margin: 15px 0 0;
+}
+
+#railtips .tip h3 {
+  margin: 0;
+}
+
+#railtips .tip.yellow {
+  background: hsl(55, 80%, 80%);
+  color: hsl(55, 100%, 10%);
+}
+
+#railtips .tip.green {
+  background: hsl(100, 80%, 80%);
+  color: hsl(100, 100%, 10%);
+}
+
+#railtips .tip.blue {
+  background: hsl(200, 80%, 80%);
+  color: hsl(200, 100%, 10%);
+}
+
+#railtips .tip.red {
+  background: hsl(0, 80%, 80%);
+  color: hsl(0, 100%, 10%);
+}
+
+#gpssharing .map span {
+  font-weight: bold;
+  font-size: 1.1em;
+  position: absolute;
+  background: var(--page-background-dim);
+}
+
+#gpssharing .map span:nth-child(1) {
+  top: 335px;
+  left: 60px;
+}
+
+#gpssharing .map span:nth-child(2) {
+  top: 100px;
+  left: 80px;
+}
+
+#gpssharing .map span:nth-child(3) {
+  top: 235px;
+  left: 165px;
+  padding-left: 20px;
+}
+
+#gpssharing .map span:nth-child(4) {
+  top: 40px;
+  left: 255px;
+}
+
+#gpssharing .map .train {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 100%;
+  left: 375px;
+  top: 150px;
+}
+
+#gpssharing .map .train:before, #gpssharing .map .train:after {
+  content: "";
+  display: block;
+  background: transparent;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  position: absolute;
+  animation: 1s cubic-bezier(.5, 0, 1, .6) infinite alternate dimming;
+}
+
+#gpssharing .map .train:before {
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 1);
+  top: -2px;
+  left: -2px;
+  animation-delay: 0;
+}
+
+#gpssharing .map .train:after {
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .8);
+  top: -7px;
+  left: -7px;
+  animation-delay: .5s;
+}
+
+#gpssharing .info > div span:nth-child(2) {
+  font-weight: normal;
+}
+
+#gpssharing .box {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  top: 50px;
+}
+
+#gpssharing .box:before {
+  content: "";
+  display: block;
+  background: white;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: rotate(45deg)
+}
+
+#gpssharing .info > div {
+  margin-right: 50px;
+}
+
+#gpssharing .map {
+  width: 400px;
+  height: 400px;
+  background: url("img/pathpiece.svg");
+  position: relative;
+}
+
+#story {
+  background: linear-gradient(
+    to right, 
+    transparent 20px,
+    var(--soft-blue-1) 20px, 
+    var(--soft-blue-1) 30px,
+    transparent 30px
+  );
+  padding: 0 60px 60px;
+  margin-top: 50px;
+  box-shadow: 0 -50px 50px 0 var(--page-background) inset;
+}
+
+#story h2 {
+  margin: 0
+}
+
+#story .box h2 {
+  margin: 15px 0
+}
+
+#story .box {
+  margin: 20px 0;
+  display: block;
+}
+
+#story > div {
+  position: relative
+}
+
+#story > div > .fas:first-child {
+  position: absolute;
+  left: calc(-30px - 1.1em);
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 100%;
+  background: var(--darker-blue);
+  text-align: center;
+  line-height: 1.7em;
+  font-size: 1.2em;
+  color: white;
+}
+
+#story .map {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+#story .inactive {
+  margin: 5em 0;
+}
+
+#story .inactive:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 7.5em;
+  border-left: 14px dashed var(--page-background);
+  top: -2em;
+  left: -42px;
+}
+
+#story .station:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 10px;
+  background: var(--soft-blue-1);
+  top: 1em;
+  left: -35px;
+}
+
+#story .places {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow-x: scroll;
+}
+
+#story .places li {
+  margin-right: 20px;
+  line-height: 0;
+}
+
+#story .places b {
+  display: block;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+#story .places span {
+  color: var(--grey)
+}
+
+
+.rl-spacing {
+  display: flex;
+}
+
+.rl-spacing button {
+  display: block;
+  margin-top: 40px;
+}
+
+.rl-spacing ul {
+  padding: 0 18px 0;
+}
+
+.rl-spacing > div {
+  width: 100%;
+}
+
+.rl-spacing > div > div {
+  vertical-align: top;
+  margin-right: 20px;
+}
