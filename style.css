@@ -165,7 +165,10 @@ section.blue {
 	background: var(--soft-blue);
 }
 
-button {
+a {
+	text-decoration: none;
+	display: inline-block;
+	color: inherit;
 	border: 0;
 	padding: 10px 25px;
 	font: inherit;
@@ -174,17 +177,13 @@ button {
 	transition: .1s;
 }
 
-button:hover {
+a:hover {
 	background: rgba(0, 0, 0, .2);
 }
 
-button:active {
+a:active {
 	background: rgba(0, 0, 0, .3);
 	box-shadow: 0 0 0 5px rgba(0, 0, 0, .1) inset;
-}
-
-a {
-	text-decoration: none;
 }
 
 section.green {
