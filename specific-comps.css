@@ -37,6 +37,10 @@
     background: var(--page-background);
   }
   
+  table tr td:nth-child(n+2) {
+    text-align: center;
+  }
+  
 }
 
 @media(min-width:790px) {
