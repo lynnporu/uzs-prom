@@ -1,0 +1,27 @@
+section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  border: 1px solid var(--grey);
+  padding: 10px;
+  font-weight: normal;
+  text-align: left;
+}
+
+table a {
+	margin-right: 20px;
+}
+
+table td.red {
+  background: var(--soft-red)
+}
+
+table td.green {
+  background: var(--soft-green)
+}
+
+table td.yellow {
+  background: var(--soft-orange)
+}

@@ -154,6 +154,10 @@
   }
 }
 
+section:first-child .fas {
+  margin: 0 10px;
+}
+
 #mapsection {
   background: url("img/map.svg");
   padding: 100px 0;
