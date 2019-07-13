@@ -8,6 +8,7 @@
 	--soft-blue: #a8c3f0;
 	--soft-orange: #f0dea8;
 	--page-background: rgb(240, 240, 240);
+	--page-background-light: rgb(243, 243, 243);
 	--page-background-dim: rgba(240, 240, 240, .6);
 	--grey: #888;
 	--grey-light: #bbb;
@@ -55,6 +56,10 @@
 		padding-left: 100px;
 		padding-right: 100px;
 	}
+
+	body {
+		font-size: 16px;
+	}
 	
 }
 
@@ -67,6 +72,10 @@
 	.rl-spacing {
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+
+	body {
+		font-size: 14px;
 	}
 	
 }
@@ -166,7 +175,7 @@ section.blue {
 }
 
 a {
-  margin-top: 1.5em;
+	margin: 5px 0;
 	text-decoration: none;
 	display: inline-block;
 	color: inherit;

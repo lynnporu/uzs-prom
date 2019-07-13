@@ -56,7 +56,15 @@
   }
   
   #story {
-    padding: 0 60px 60px;
+    padding: 0 10px 60px 60px;
+  }
+
+  #gpssharing .map span {
+    background: var(--page-background-dim);
+  }
+
+  #story .inactive:before {
+    border-left-color: var(--page-background);
   }
 
 }
@@ -68,14 +76,22 @@
     border: 1px dashed var(--grey-light);
     padding: 20px 20px 10px 10px;
     border-radius: 3px;
-    background: rgba(255, 255, 255, .3);
+    background: var(--page-background-light);
   }
   
   #story {
     border: 1px dashed var(--grey-light);
     border-radius: 3px;
-    background-color: rgba(255, 255, 255, .3);
-    padding: 40px 60px 60px;
+    background-color: var(--page-background-light);
+    padding: 40px 20px 60px 60px;
+  }
+
+  #gpssharing .map span {
+    background: var(--page-background-light);
+  }
+
+  #story .inactive:before {
+    border-left-color: var(--page-background-light);
   }
   
   #gpssharing .box:before {
@@ -147,13 +163,9 @@
     display: block;
   }
   
-  #gpssharing .map_parent {
-    padding: 0 20px 0 10px;
-  }
-  
   #gpssharing .map {
-    transform: scale(.8);
-    margin: 0 calc(50% - 200px) -10PX;
+    transform: scale(.75);
+    margin: -50px calc(50% - 205px) -60px;
   }
   
 }
@@ -168,7 +180,7 @@
 @media(max-width: 360px) {
   
   #gpssharing .map {
-    margin: 0 calc(50% - 210px) -80px;
+    margin: -50px -70px -60px;
   }
 }
 
@@ -179,7 +191,7 @@ section:first-child .fas {
 #mapsection {
   background: url("img/map.svg");
   padding: 100px 0;
-  background-position: top left;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -298,7 +310,6 @@ section:first-child .fas {
   font-weight: bold;
   font-size: 1.1em;
   position: absolute;
-  background: var(--page-background-dim);
 }
 
 #gpssharing .map span:nth-child(1) {
@@ -451,7 +462,8 @@ section:first-child .fas {
   display: block;
   width: 10px;
   height: 7.5em;
-  border-left: 14px dashed var(--page-background);
+  border-left-width: 14px;
+  border-left-style: dashed;
   top: -2em;
   left: -42px;
 }
@@ -487,6 +499,9 @@ section:first-child .fas {
   color: var(--grey)
 }
 
+.rl-spacing a {
+  margin: 3em 0;
+}
 
 .rl-spacing {
   display: flex;
